@@ -1,0 +1,31 @@
+---
+title: "RTF to TXT"
+author: "Jinyi Luo"
+date: "10/16/2019"
+output:
+  html_document: default
+  pdf_document: default
+---
+Import Library striprtf
+```{r}
+library(striprtf)
+```
+Set up folder Path and Output Path 
+```{r}
+folder_path <- "D:/Inputs"
+output_path <- "D:/Outputs/"
+```
+Print files, make sure path is set up correctly
+```{r}
+files<-list.files(folder_path, pattern="\\.rtf$")
+files
+```
+Use for loop to read each file, and output the same file name with txt extension.
+```{r}
+for(file in files){
+  x <- read_rtf(file.path(folder_path,file))
+  y <- strip_rtf(x)
+  write(y,paste(output_path,sub("\\.rtf$","",file),".txt",sep=""))
+}
+```
+
