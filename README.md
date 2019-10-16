@@ -1,5 +1,5 @@
 # RTFtoTXT
-Batch covert rtf to txt; convert a folder of .rtf to .txt; rtf to txt converter using R.
+Batch convert rtf to txt; convert a folder of .rtf to .txt; rtf to txt converter using R.
 
 RTF to TXT (Simple Version) utlized the R library striprtf.
 
